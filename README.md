@@ -4,7 +4,7 @@
 OTA 更新、插件与安装包管理、插件市场、文件浏览 / 终端 / 配置编辑、以及 PenMods V2.7.3 启动器迁移。
 
 界面是 **PySide6 + Qt Quick (QML)** 渲染的原生桌面程序（液态玻璃：浅/深色主题、7 种强调色、动态或照片背板、圆角窗口），
-**不是本地网页**。设计系统见 [docs/DESIGN.md](docs/DESIGN.md)，里程碑见 [docs/PLAN.md](docs/PLAN.md)，
+**不是本地网页**。里程碑见 [docs/PLAN.md](docs/PLAN.md)，
 C 核心与 GUI 之间的 JSON 协议见 [docs/PROTOCOL.md](docs/PROTOCOL.md)。
 
 ![连接页](docs/screenshots/connect.png)
