@@ -19,6 +19,25 @@ SCHEMA_VERSION = 1
 # after replacing any bundle.
 DEFAULT_INDEX_URL = "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/index.json"
 
+_RAW_RE = re.compile(
+    r"^https?://raw\.githubusercontent\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)/([^/]+)/(.+)$"
+)
+
+
+def mirror_urls(url: str = DEFAULT_INDEX_URL) -> list[str]:
+    """raw.githubusercontent.com is unreachable on some networks; jsDelivr serves the same file.
+
+    Returns the original URL first, then jsDelivr CDN mirrors, so a plain fetch works
+    everywhere it can and falls back automatically where GitHub raw is blocked.
+    """
+    urls = [url]
+    match = _RAW_RE.match(url or "")
+    if match:
+        owner, repo, branch, path = match.groups()
+        urls.append(f"https://cdn.jsdelivr.net/gh/{owner}/{repo}@{branch}/{path}")
+        urls.append(f"https://fastly.jsdelivr.net/gh/{owner}/{repo}@{branch}/{path}")
+    return urls
+
 _GITHUB_RE = re.compile(r"^https?://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?(?:/.*)?$")
 
 
@@ -141,10 +160,20 @@ def fetch_index(url: str = DEFAULT_INDEX_URL, local: bool = False) -> dict:
             safe.require_https(url, allow_localhost=True, what="索引地址")
         except safe.SafetyError as exc:
             raise MarketError(exc.code, exc.message) from exc
-        try:
-            doc = netutil.get_json(url)
-        except netutil.NetError as exc:
-            raise MarketError(exc.code, f"无法获取插件索引：{url}", exc.detail) from exc
+        last: netutil.NetError | None = None
+        for candidate in mirror_urls(url):
+            try:
+                doc = netutil.get_json(candidate)
+                url = candidate
+                break
+            except netutil.NetError as exc:
+                last = exc
+        else:
+            raise MarketError(
+                (last.code if last else "NETWORK_ERROR"),
+                f"无法获取插件索引：{url}",
+                (last.detail if last else None),
+            )
     plugin_list = validate_index(doc)
     return {"schema_version": SCHEMA_VERSION, "name": str(doc.get("name") or "PenMods 插件市场"),
             "url": url, "plugins": plugin_list}

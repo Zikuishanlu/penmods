@@ -66,6 +66,10 @@ python src/scripts/make_market_index.py --base-url https://raw.githubusercontent
 
 > 建仓库时仓库地址为 `Zikuishanlu/penmods`；若改了账号或仓库名，把这一处常量、下面这条命令和 `plugins/index.json` 里的地址一起改掉。
 
+`raw.githubusercontent.com` 在部分网络（如中国大陆）会被阻断，所以 `market.mirror_urls()` 会在直连失败后
+自动改用 jsDelivr 镜像（`https://cdn.jsdelivr.net/gh/Zikuishanlu/penmods@main/plugins/index.json`），
+不需要在界面上手填；也可以把镜像地址直接粘贴到市场页的「索引 URL」。
+
 产物是 `plugins/index.json`（含每个包的 `sha256`，更换包后要重新生成）与 `plugins/SHA256SUMS`。
 索引就位后，市场页默认即可列出这些插件；也可以直接把 GitHub 仓库链接填进「从仓库安装」。
 
