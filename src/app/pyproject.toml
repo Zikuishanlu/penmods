@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "penmods-manager"
+version = "0.1.0"
+description = "Desktop manager for pen readers running PenMods (liquid-glass UI, ADB/SSH)"
+requires-python = ">=3.10"
+dependencies = ["PySide6>=6.6"]
+
+[project.scripts]
+penmods-manager = "penmanager.app:main"
+
+[tool.setuptools]
+packages = ["penmanager"]
+
+[tool.setuptools.package-data]
+penmanager = ["qml/**/*.qml"]

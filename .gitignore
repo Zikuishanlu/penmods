@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# build outputs
+build/
+dist/
+*.spec.bak
+
+# release artifacts are uploaded as GitHub Release assets, not committed
+release/*.zip
+release/*.7z
+
+# local scratch / toolchain
+.toolchain/
+_ac/
+_logs/
+
+# OS junk
+Thumbs.db
+desktop.ini

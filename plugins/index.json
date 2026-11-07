@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "name": "PenMods 管理器插件索引",
+  "plugins": [
+    {
+      "id": "com.bilipocket.player",
+      "name": "笔里哔哩",
+      "summary": "为 320x170 触摸屏设计的哔哩哔哩客户端",
+      "author": "BiliPocket",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.7.5",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/bili_plugin.zip",
+          "sha256": "aefc0294a258432f920479aa53d102b19f90950e02d05b6c6de70fd71bc576b2",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": true,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.example.calculator",
+      "name": "计算器",
+      "summary": "计算器",
+      "author": "DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/calculator.zip",
+          "sha256": "57e654639ff1a247b193867ef86a1df844dcd62b82b8ad95618a680e8d45097d",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.fanqie.reader",
+      "name": "笔上番茄",
+      "summary": "为 320x170 触摸屏设计的番茄小说客户端",
+      "author": "FanqieNovel",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/fanqie_plugin.zip",
+          "sha256": "761cc274a859d1d09dc09b27fa40178b73ac40a2016a28e2de08e4afb649563a",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": true,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.game.2048",
+      "name": "2048",
+      "summary": "经典的2048数字拼图游戏",
+      "author": "姓胡的胡萝卜 & DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/2048.zip",
+          "sha256": "1268513170826ad36551cea38ed80227f687dd94dda806b7fee1b73aa9bf4e24",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.game.minesweeper",
+      "name": "扫雷",
+      "summary": "经典扫雷游戏",
+      "author": "姓胡的胡萝卜 & DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/minesweeper.zip",
+          "sha256": "d1200a45414c4d0c8869c90d42c3dbf4da6bb5d3ad9f507717d64182df660596",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.text.browser",
+      "name": "文本浏览器",
+      "summary": "以文本形式浏览网页，支持打开URL或必应搜索。",
+      "author": "姓胡的胡萝卜 & DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.5",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/browser.zip",
+          "sha256": "ce28b545a98424bf179b7e7f4b191d247f7d5d0bfdc41ed0a76602c75fcf5919",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.text.editor",
+      "name": "文本编辑器",
+      "summary": "支持打开、编辑和保存任意文本文件。",
+      "author": "姓胡的胡萝卜 & DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/texteditor.zip",
+          "sha256": "8258034b2af0e0acc71c9b72fdf469df3c0b638cc7c2277dd0b8f7f58ae09dce",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    },
+    {
+      "id": "com.weather.viewer",
+      "name": "天气",
+      "summary": "使用 Open-Meteo 的天气插件，支持逐日、逐小时预报。",
+      "author": "姓胡的胡萝卜 & DeepSeek",
+      "repository": "",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "url": "https://raw.githubusercontent.com/Zikuishanlu/penmods/main/plugins/weather.zip",
+          "sha256": "37efe7bd2bcede552647fc788ba27e0732e61dca788f909bca59161b8fcf07b7",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": false,
+          "roots": []
+        }
+      ]
+    }
+  ]
+}

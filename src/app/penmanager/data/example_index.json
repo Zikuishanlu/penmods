@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "PenMods 插件索引（示例模板）",
+  "plugins": [
+    {
+      "id": "com.bilipocket.player",
+      "name": "哔哩哔哩",
+      "summary": "为 320x170 触摸屏设计的哔哩哔哩客户端（示例：把 url 换成真实 release 资产）",
+      "author": "BiliPocket",
+      "repository": "https://github.com/BiliPocket/bili_plugin",
+      "icon": "",
+      "versions": [
+        {
+          "version": "1.7.5",
+          "url": "https://github.com/BiliPocket/bili_plugin/releases/download/v1.7.5/bili_plugin.zip",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "devices": [
+            "YDP02X",
+            "YDPG3",
+            "YDP03X"
+          ],
+          "min_penmods": "2.0.0",
+          "native": true,
+          "roots": []
+        }
+      ]
+    }
+  ]
+}
