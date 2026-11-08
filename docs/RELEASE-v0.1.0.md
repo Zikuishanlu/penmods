@@ -39,7 +39,7 @@ Windows 上的有道点读笔管理工具：USB 与 Wi-Fi 双通道连接，一�
 
 ```
 文件大小  70,135,472 字节
-SHA-256   10b25f3a426ae7f075d911c8e485129181d38df4f02909c13b25cb1ccd82f904
+SHA-256   9e2403943c05dffbee5bc944e9de9e217260d0ba2ed753ed0a32a0f3d77fca6a
 ```
 
 > 提示：如果连接页显示「找不到 adb.exe」或「adb 服务异常」，多半是系统临时目录不可写或 5037 端口被占用；程序已把 adb 的 `TMP/TEMP` 指到自己的数据目录，仍失败时在命令行跑 `adb kill-server` 再 `adb devices -l` 看真实报错。
